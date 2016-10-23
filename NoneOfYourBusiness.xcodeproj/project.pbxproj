@@ -12,6 +12,7 @@
 		22C732431DBBA36500FE1F42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C732411DBBA36500FE1F42 /* Main.storyboard */; };
 		22C732451DBBA36500FE1F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C732441DBBA36500FE1F42 /* Assets.xcassets */; };
 		22C732481DBBA36500FE1F42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C732461DBBA36500FE1F42 /* LaunchScreen.storyboard */; };
+		22C732501DBBA57000FE1F42 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C7324F1DBBA57000FE1F42 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		22C732441DBBA36500FE1F42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22C732471DBBA36500FE1F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22C732491DBBA36500FE1F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22C7324F1DBBA57000FE1F42 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C732501DBBA57000FE1F42 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		22C732311DBBA36500FE1F42 = {
 			isa = PBXGroup;
 			children = (
+				22C7324F1DBBA57000FE1F42 /* LocalAuthentication.framework */,
 				22C7323C1DBBA36500FE1F42 /* NoneOfYourBusiness */,
 				22C7323B1DBBA36500FE1F42 /* Products */,
 			);
@@ -96,6 +100,7 @@
 				TargetAttributes = {
 					22C732391DBBA36500FE1F42 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = EC4K522XBF;
 					};
 				};
 			};
@@ -249,10 +254,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NoneOfYourBusiness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.penpitchan.NoneOfYourBusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +268,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NoneOfYourBusiness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.penpitchan.NoneOfYourBusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

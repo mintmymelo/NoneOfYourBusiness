@@ -8,14 +8,21 @@
 
 import UIKit
 import LocalAuthentication
+import RealmSwift
 
 class ViewController: UIViewController {
+    
+    // IBOutlets
+    @IBOutlet weak var insertButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         self.authenticateUser()
+        
+        //prints the database location to the debug console
+        print(Realm.Configuration.defaultConfiguration.fileURL)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +30,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    // IBActions
+    
+    
+    
+    // Touch ID Authentication
     func authenticateUser() {
         let context = LAContext()
         var error: NSError?
@@ -104,3 +117,13 @@ class ViewController: UIViewController {
     
 }
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}

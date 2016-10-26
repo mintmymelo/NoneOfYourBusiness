@@ -1,0 +1,6 @@
+framework module Pods_NoneOfYourBusiness {
+  umbrella header "Pods-NoneOfYourBusiness-umbrella.h"
+
+  export *
+  module * { export * }
+}
